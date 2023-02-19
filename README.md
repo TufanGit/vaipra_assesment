@@ -16,6 +16,16 @@ There are several ways to run a Spring Boot application on your local machine. O
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
+Before running the application you have to configure the database cconnectin in application.propetirs file.The steps are below:
+1: Create a schema inside MySql database named "vipra_assignment".
+2: Give your mysql username and password
+    spring.datasource.username = root //your own mysql username
+    spring.datasource.password = tiger //your own mysql password
+3: If you don't want to create the tables manually the uncomment 
+   spring.jpa.hibernate.ddl-auto=update
+   
+   Tables will be created automatically in the database
+
 ```shell
 mvn spring-boot:run
 ```
